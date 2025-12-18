@@ -37,7 +37,7 @@ def list_students():
 def update(id, name, email):
     session = SessionLocal()
     student = Student.get(session, id)
-    if not student:
+    if not student:l
         click.echo("Student not found")
         session.close()
         return

@@ -1,0 +1,89 @@
+FIRST PROMPT 
+does this code support crud
+
+
+Responses 
+Yes, this model supports CRUD, but it does not implement CRUD by itself.
+What’s missing
+Your code does not include:
+A database session
+
+
+CRUD methods or queries
+
+
+Commit / rollback logic
+SECOND PROMPT
+fix the implementation
+Here’s a fixed implementation that actually implements CRUD, while keeping things clean and idiomatic.
+I’ll show two correct approaches.
+ 1. Approach 1 is recommended.
+ 2.Approach 2 works but is less clean.
+THIRD PROMPT✅ Features Added / Fixed
+
+    Update and Delete commands for Students and Courses
+
+        Prompts for ID and optional fields
+
+        Checks existence before acting
+
+        Calls model CRUD methods
+
+    List commands for viewing all records
+
+    Proper session handling
+
+        Opens a session at start of each command
+
+        Closes session at the end
+
+    Feedback
+
+        Echoes creation, update, deletion, or errors to the user
+
+
+Does this model.py support crud
+What it does
+1. Defines database tables
+ 2. Defines columns and relationships
+ 3. Defines object–table mapping
+FOURTH PROMPT
+Fix the implementation of model.py
+fixeThis version keeps everything self-contained: the models can now create, read, update, and delete themselves when given a SQLAlchemy Session.d model.py that actually implements CRUD, not just schema definitions.
+FIFTH PROMPT 
+Does this code of cli.py support crud
+No — the cli.py you shared does not support CRUD.
+SIXTH PROMPT
+Here’s a fixed and fully functional cli.py implementation that properly integrates your CRUD operations through the CLI commands. The key is wiring the commands so that user input triggers the CRUD methods in your models or repositories.
+I’ll assume you already have commands/students.py, commands/courses.py, and commands/enrollments.py with the CRUD logic.
+SEVENTH PROMPT 
+Fix the implementation of cli.py ,by updating and deleting
+✅ Features Added / Fixed
+Update and Delete commands for Students and Courses
+
+
+Prompts for ID and optional fields
+
+
+Checks existence before acting
+
+
+Calls model CRUD methods
+
+
+List commands for viewing all records
+
+
+Proper session handling
+
+
+Opens a session at start of each command
+
+
+Closes session at the end
+
+
+Feedback
+
+
+Echoes creation, update, deletion, or errors to the user
